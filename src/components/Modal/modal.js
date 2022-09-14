@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { getData } from "../../store/action/selectors";
 import { priceFormatter } from "../../helper";
+import { CSVLink } from "react-csv";
 
 import "./modal.css";
 
@@ -17,13 +18,9 @@ function CreditModal(props) {
           To'lov tartibi
         </Modal.Title>
         <div className="modal-btn">
-          <DownloadTableExcel
-            filename="users table"
-            sheet="users"
-            currentTableRef={tableRef.current}
-          >
+          <CSVLink data={data}>
             <button> Axborot varaqasini chiqarish </button>
-          </DownloadTableExcel>
+          </CSVLink>
 
           <button onClick={props.onHide}>
             <img src="img/close.png" alt="close" />
@@ -35,20 +32,28 @@ function CreditModal(props) {
           <thead>
             <tr>
               <th scope="col">Oy</th>
-              <th scope="col">Asosiy qarzning qoldig'i</th>
-              <th scope="col">Asosiy qarz bo'yicha to'lov</th>
-              <th scope="col">Foizlarni to'lash</th>
-              <th scope="col">To'lovning umumiy miqdori</th>
+              <th className="table-item" scope="col">
+                Asosiy qarzning qoldig'i
+              </th>
+              <th className="table-item" scope="col">
+                Asosiy qarz bo'yicha to'lov
+              </th>
+              <th className="table-item" scope="col">
+                Foizlarni to'lash
+              </th>
+              <th className="table-item" scope="col">
+                To'lovning umumiy miqdori
+              </th>
             </tr>
           </thead>
           <tbody>
             {data.map((item) => (
               <tr key={item.number}>
                 <th scope="row">{item.number}</th>
-                <td>{priceFormatter(item.balans)}</td>
-                <td>{priceFormatter(item.aqbt)}</td>
-                <td>{priceFormatter(item.ft)}</td>
-                <td>{priceFormatter(item.tum)}</td>
+                <td className="table-item">{priceFormatter(item.balans)}</td>
+                <td className="table-item">{priceFormatter(item.aqbt)}</td>
+                <td className="table-item">{priceFormatter(item.ft)}</td>
+                <td className="table-item">{priceFormatter(item.tum)}</td>
               </tr>
             ))}
           </tbody>

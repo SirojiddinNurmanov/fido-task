@@ -101,7 +101,15 @@ const Home = () => {
                 <input
                   type="number"
                   className="range-amount"
-                  onChange={(e) => setCreditValue(e.target.value)}
+                  onChange={(e) => {
+                    if (e.target.value < 5000000) {
+                      setCreditValue(5000000);
+                    } else if (e.target.value > 400000000) {
+                      setCreditValue(400000000);
+                    } else {
+                      setCreditValue(e.target.value);
+                    }
+                  }}
                   value={creditValue}
                 />
 
@@ -128,8 +136,10 @@ const Home = () => {
                   type="number"
                   className="range-amount"
                   onChange={(e) => {
-                    if (e.target.value === "") {
+                    if (e.target.value === "" || e.target.value < 6) {
                       setCreditTime(6);
+                    } else if (e.target.value > 48) {
+                      setCreditTime(48);
                     } else {
                       setCreditTime(e.target.value);
                     }

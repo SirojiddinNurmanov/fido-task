@@ -25,6 +25,9 @@
 .modal-content tbody tr:first-child{
     border-top: 1.5px solid #00805f;
 }
+.table-item{
+    text-align: right;
+}
 
 @media only screen and (max-width: 414px) {
    table thead tr th{
