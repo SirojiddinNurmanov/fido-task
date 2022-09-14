@@ -1,0 +1,31 @@
+.modal-dialog{
+    width: 90%;
+    max-width: 90% !important;
+    max-height: 80vh !important;
+}
+.modal-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.modal-btn button{
+    border: none;
+}
+.modal-btn button:last-child{
+    background-color: #fff;
+    padding: 10px;
+}
+.modal-btn button:first-child{
+    border: none;
+    padding:10px;
+    background-color: #00805f;
+    color: #fff;
+    border-radius: 5px;
+}
+.modal-content tbody tr:first-child{
+    border-top: 1.5px solid #00805f;
+}
+
+/* tbody, thead{
+    display: block;
+} */

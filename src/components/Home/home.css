@@ -1,0 +1,190 @@
+.credit-header{
+    padding: 100px 0 40px 0;
+}
+.title{
+    font-weight: 700;
+}
+.credit-type-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.credit-type-body select{
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid rgb(151, 151, 151);
+    outline: none;
+}
+.type-selector .credit-btn:first-child{
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #00805f;
+    background-color: #fff;
+    color: #00805f;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.type-selector .credit-btn:last-child{
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #00805f;
+    background-color: #fff;
+    color: #00805f;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.type-selector .credit-btn.active{
+    background-color: #00805f;
+    color: #fff;
+}
+.credit-type-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.credit-type-input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.credit-type-input input[type='radio']{
+    width: 18px;
+    height: 18px;
+}
+.credit-type-input input {
+     appearance: none;
+     -webkit-appearance: none;
+     border: 1px solid #fff;
+     background-color: #fff;
+     border-radius: 50%;
+}
+
+.credit-type-input input:hover {
+    border-width: 0;
+}
+.credit-type-input input {
+    box-shadow: 0 0 0 2px #000;
+}
+
+.credit-type-input input:checked {
+    box-shadow: 0 0 0 1px yellow;
+    background-color: yellow;
+    border-width: 0.2rem;
+}
+.credit-type-input input:focus-visible {
+    outline-offset: 0;
+}
+.credit-type-input label{
+    font-weight: 600;
+}
+
+/**** Credit Amount ****/
+.credit-amount{
+    margin: 20px 0 50px 0;
+}
+.credit-amount-range{
+    position: relative;
+}
+.credit-amount-range input{
+    width: 100%;
+   
+}
+.credit-amount-range .range-amount{
+    outline: none;
+    padding: 20px 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+.range-self{
+    position: absolute;
+    top: 57px;
+    left: 0;
+    /* height: 2px; */
+}
+
+.range-self-footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Credit time*/
+.credit-time{
+    margin: 20px 0 50px 0;
+}
+
+/*Credit Card */
+
+.credit-card{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 55px 4px rgba(0,0,0,0.18);
+-webkit-box-shadow: 2px 2px 55px 4px rgba(0,0,0,0.18);
+-moz-box-shadow: 2px 2px 55px 4px rgba(0,0,0,0.18);
+}
+/* .credit-card-item{
+    margin-bottom: 10px;
+} */
+.credit-card-item h1{
+    color: #00805f;
+}
+.credit-card-item span{
+    color: #999;
+}
+.credit-card-btn{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+.credit-card-btn button{
+    padding: 10px 20px;
+    background-color: #00805f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.credit{
+    padding-right: 20px;
+}
+.credit-2{
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+   .credit{
+    padding-right: 0;
+   }
+   .credit-2{
+    padding-left: 0;
+    margin-top: 40px;
+   }
+  }
+@media only screen and (max-width: 767px) {
+  .credit-type-body select{
+    width: auto;
+  }
+  }
+@media only screen and (max-width: 576px) {
+  .credit-type-footer{
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 5px;
+  }
+  }
+@media (min-width: 992px) and (max-width: 1200px) {
+    .credit-card-item h1{
+        font-size: 30px;
+    }
+  }
+
