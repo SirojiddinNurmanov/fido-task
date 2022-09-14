@@ -197,4 +197,13 @@
         font-size: 30px;
     }
   }
-
+  @media only screen and (max-width: 414px) {
+    .credit-header{
+        padding-top: 20px;
+    }
+  .credit-type-footer{
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 5px;
+  }
+  }
