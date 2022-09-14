@@ -162,6 +162,9 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .credit-header{
+        padding-top: 20px;
+    }
    .credit{
     padding-right: 0;
    }
@@ -171,11 +174,17 @@
    }
   }
 @media only screen and (max-width: 767px) {
+    .credit-header{
+        padding-top: 20px;
+    }
   .credit-type-body select{
     width: auto;
   }
   }
 @media only screen and (max-width: 576px) {
+    .credit-header{
+        padding-top: 20px;
+    }
   .credit-type-footer{
    flex-direction: column;
    align-items: flex-start;
