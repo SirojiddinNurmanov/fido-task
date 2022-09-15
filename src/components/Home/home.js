@@ -22,7 +22,6 @@ const Home = () => {
       : dispatch(differensial(creditTime, creditValue * selectedValue));
   };
   update();
-  console.log(data);
 
   let creditSum = 0;
   let allSum = 0;
@@ -30,7 +29,6 @@ const Home = () => {
     creditSum = creditSum + item.ft;
     allSum = allSum + item.aqbt;
   });
-  console.log(selectedValue);
   return (
     <div className="container">
       <CreditModal show={modalShow} onHide={() => setModalShow(false)} />

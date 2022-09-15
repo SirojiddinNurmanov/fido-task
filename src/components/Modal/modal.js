@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { DownloadTableExcel } from "react-export-table-to-excel";
 import { Modal } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { getData } from "../../store/action/selectors";
@@ -11,6 +10,7 @@ import "./modal.css";
 function CreditModal(props) {
   const data = useSelector(getData);
   const tableRef = useRef(null);
+
   return (
     <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header>
